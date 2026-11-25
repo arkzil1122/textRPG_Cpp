@@ -38,6 +38,7 @@ private:
 	int Level;
 	bool isDead;
 
+	void SetMonster(MonsterType _type);
 public:
 	int GetHP();
 	int GetAtk();
@@ -45,5 +46,6 @@ public:
 	int GetXP();
 	
 	void GetDamage(int _damage);
+
 };
 
