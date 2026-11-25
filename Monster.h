@@ -50,6 +50,7 @@ public:
 
 	void GetDamage(int _damage);
 
+	void InitMonster();
 	void CreateMonster();
 	void Render();
 };
