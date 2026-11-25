@@ -33,6 +33,7 @@ void Player::InitPlayer()
 	MaxXP = 0;
 	XP = 0;
 	Gold = 0;
+	isDead = false;
 }
 
 int Player::GetHP()
