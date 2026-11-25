@@ -1,7 +1,35 @@
 #pragma once
+﻿#pragma once
+
+#include <iostream>
+#include <string>
+#include "Utility.h"
+
+extern Utility utility;
+
+enum MonsterType {
+	MONSTER_NONE,
+	MONSTER_SLIME,
+	MONSTER_ORC,
+	MONSTER_RABBIT,
+	MONSTER_DRAGON,
+	MONSTER_COUNT
+};
+
+inline std::string MonsterNameAry[MONSTER_COUNT] = {
+	"없음",
+	"슬라임",
+	"오크",
+	"토깽",
+	"용가리",
+};
+
 class Monster
 {
 private:
+	MonsterType type;
+	std::string MonsterName;
+
 	int HP;
 	int MaxHP;
 	int Atk;

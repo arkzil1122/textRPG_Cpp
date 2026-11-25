@@ -1,30 +1,30 @@
-#include "Monster.h"
+﻿#include "Monster.h"
 
 int Monster::GetHP()
 {
-    return HP;
+	return HP;
 }
 
 int Monster::GetAtk()
 {
-    return Atk;
+	return Atk;
 }
 
 int Monster::GetGold()
 {
-    return Gold;
+	return Gold;
 }
 
 int Monster::GetXP()
 {
-    return XP;
+	return XP;
 }
 
 void Monster::GetDamage(int _damage)
 {
-    HP -= _damage;
-    if (HP <= 0) {
-        HP = 0;
-        isDead = true;
-    }
+	HP -= _damage;
+	if (HP <= 0) {
+		HP = 0;
+		isDead = true;
+	}
 }
