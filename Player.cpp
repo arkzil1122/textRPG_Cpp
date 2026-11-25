@@ -24,6 +24,16 @@ void Player::SelectJob()
 	}
 }
 
+void Player::InitPlayer()
+{
+	HP = 0;
+	MaxHP = 0;
+	Atk = 0;
+	Level = 0;
+	MaxXP = 0;
+	XP = 0;
+	Gold = 0;
+}
 
 int Player::GetHP()
 {

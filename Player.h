@@ -37,6 +37,8 @@ private:
 
 public:
 	void SelectJob();
+	void InitPlayer();
+
 	int GetHP();
 	int GetAtk();
 	int GetLevel();
