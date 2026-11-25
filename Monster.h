@@ -46,6 +46,8 @@ public:
 	int GetXP();
 	
 	bool GetisDead();
+	std::string GetName();
+
 	void GetDamage(int _damage);
 
 	void CreateMonster();

@@ -24,6 +24,12 @@ bool Monster::GetisDead()
 {
 	return isDead;
 }
+
+std::string Monster::GetName()
+{
+	return MonsterName;
+}
+
 void Monster::GetDamage(int _damage)
 {
 	HP -= _damage;
