@@ -1,5 +1,10 @@
 ﻿#pragma once
 
+#include <iostream>
+#include <cstdlib>
+#include <ctime>
+#include <limits>
+
 class Utility
 {
 public:

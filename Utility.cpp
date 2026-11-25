@@ -1,10 +1,5 @@
 ﻿#include "Utility.h"
 
-#include <iostream>
-#include <cstdlib>
-#include <ctime>
-#include <limits>
-
 void Utility::InitRandom()
 {
 	srand((unsigned int)time(NULL));
