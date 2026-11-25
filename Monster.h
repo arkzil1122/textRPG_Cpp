@@ -47,5 +47,6 @@ public:
 	
 	void GetDamage(int _damage);
 
+	void Render();
 };
 

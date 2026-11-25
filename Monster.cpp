@@ -78,3 +78,11 @@ void Monster::SetMonster(MonsterType _type) {
 }
 
 
+void Monster::Render() {
+	std::cout << "==========================" << std::endl;
+	std::cout << "종류 : " << MonsterName << std::endl;
+	std::cout << "HP : " << HP << " / " << MaxHP;
+	std::cout << "\tAtk : " << Atk << std::endl;
+	std::cout << "레벨 : " << Level << std::endl;
+	std::cout << "==========================" << std::endl;
+}
