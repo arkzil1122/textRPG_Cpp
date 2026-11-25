@@ -1,4 +1,3 @@
-#pragma once
 ﻿#pragma once
 
 #include <iostream>
@@ -44,7 +43,6 @@ public:
 	int GetAtk();
 	int GetGold();
 	int GetXP();
-	
 	bool GetisDead();
 	std::string GetName();
 

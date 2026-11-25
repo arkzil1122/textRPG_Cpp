@@ -2,7 +2,7 @@
 
 void Player::SelectJob()
 {
-	std::cout << "직업을 선택하세요. (1. 전사\t 2. 궁수 \t 3. 법사)" << std::endl;
+	std::cout << "직업을 선택하세요. (1. 전사\t2. 궁수 \t3. 법사)" << std::endl;
 	int userInput = utility.ReadInt(1, 3);
 
 	switch (userInput) {
