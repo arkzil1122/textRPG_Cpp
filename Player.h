@@ -46,4 +46,6 @@ public:
 	int GetGold();
 
 	void GetDamage(int _damage);
+	
+	void Render();
 };

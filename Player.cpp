@@ -69,3 +69,14 @@ void Player::GetDamage(int _damage)
 	}
 	return;
 }
+
+void Player::Render() {
+	std::cout << "==========================" << std::endl;
+	std::cout << "직업 : " << JobName << std::endl;
+	std::cout << "HP : " << HP << " / " << MaxHP;
+	std::cout << "\tAtk : " << Atk << std::endl;
+	std::cout << "보유 골드 : " << Gold << "g\t";
+	std::cout << "레벨 : " << Level << std::endl;
+	std::cout << "경험치 : " << XP << " / " << MaxXP << std::endl;
+	std::cout << "==========================" << std::endl;
+}
