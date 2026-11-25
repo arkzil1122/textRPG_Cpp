@@ -4,6 +4,18 @@
 #include <cstdlib>
 #include <ctime>
 #include <limits>
+
+void Utility::InitRandom()
+{
+	srand((unsigned int)time(NULL));
+}
+
+// min ~ max 사이의 랜덤한 값 반환
+int Utility::RandomRange(int _min, int _max)
+{
+	return (rand() % (_max - _min + 1)) + _min;
+}
+
 // min ~ max 사이의 입력값 반환
 int Utility::ReadInt(int _min, int _max)
 {
