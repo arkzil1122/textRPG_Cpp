@@ -44,6 +44,7 @@ public:
 	int GetLevel();
 	int GetXP();
 	int GetGold();
+	bool GetisDead();
 
 	void GetDamage(int _damage);
 	

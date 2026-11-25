@@ -20,6 +20,10 @@ int Monster::GetXP()
 	return XP;
 }
 
+bool Monster::GetisDead()
+{
+	return isDead;
+}
 void Monster::GetDamage(int _damage)
 {
 	HP -= _damage;

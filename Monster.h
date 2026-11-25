@@ -45,6 +45,7 @@ public:
 	int GetGold();
 	int GetXP();
 	
+	bool GetisDead();
 	void GetDamage(int _damage);
 
 	void CreateMonster();

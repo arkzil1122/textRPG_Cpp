@@ -60,6 +60,11 @@ int Player::GetGold()
 	return Gold;
 }
 
+bool Player::GetisDead()
+{
+	return isDead;
+}
+
 void Player::GetDamage(int _damage)
 {
 	HP -= _damage;
