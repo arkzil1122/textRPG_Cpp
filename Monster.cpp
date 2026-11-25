@@ -36,6 +36,11 @@ void Monster::InitMonster()
 	Level = 1;
 }
 
+void Monster::CreateMonster() {
+	int monsterNum = utility.RandomRange(int(MONSTER_NONE + 1), int(MONSTER_COUNT - 1));
+	SetMonster(MonsterType(monsterNum));
+	std::cout << MonsterNameAry[monsterNum] << "이/가 나타났다!" << std::endl;
+}
 
 void Monster::SetMonster(MonsterType _type) {
 	switch (_type) {

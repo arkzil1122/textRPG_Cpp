@@ -47,6 +47,7 @@ public:
 	
 	void GetDamage(int _damage);
 
+	void CreateMonster();
 	void Render();
 };
 
