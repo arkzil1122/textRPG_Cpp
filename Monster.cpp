@@ -66,6 +66,7 @@ void Monster::SetMonster(MonsterType _type) {
 		Atk = 3;
 		Gold = 5;
 		XP = 5;
+		Speed = 0.5;
 		break;
 
 	case MONSTER_ORC:
@@ -75,6 +76,7 @@ void Monster::SetMonster(MonsterType _type) {
 		Atk = 5;
 		Gold = 8;
 		XP = 8;
+		Speed = 0.7;
 		break;
 
 	case MONSTER_RABBIT:
@@ -84,6 +86,7 @@ void Monster::SetMonster(MonsterType _type) {
 		Atk = 7;
 		Gold = 10;
 		XP = 10;
+		Speed = 1.5;
 		break;
 
 	case MONSTER_DRAGON:
@@ -93,6 +96,7 @@ void Monster::SetMonster(MonsterType _type) {
 		Atk = 10;
 		Gold = 13;
 		XP = 13;
+		Speed = 1.0;
 		break;
 	}
 }
