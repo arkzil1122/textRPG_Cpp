@@ -2,7 +2,7 @@
 #include "Utility.h"
 #include "Player.h"
 #include "Monster.h"
-#include "BattleManager.h"
+#include "BattleSystem.h"
 
 int main(void) {
 	
@@ -18,5 +18,5 @@ int main(void) {
 	monster.CreateMonster();
 	monster.Render();
 
-	BattleManager::BattleByTime(player, monster);
+	BattleSystem::BattleByTime(player, monster);
 }

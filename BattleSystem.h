@@ -15,13 +15,12 @@ enum RESULT {
 	RESULT_COUNT
 };
 
-class BattleManager
+class BattleSystem
 {
 private:
 
 
 public:
-	static RESULT Battle(Player& _player, Monster& _monster);
 	static RESULT BattleByTime(Player& _player, Monster& _monster);
 };
 

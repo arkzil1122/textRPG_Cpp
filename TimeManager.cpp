@@ -10,6 +10,7 @@ unsigned long long TimeManager::s_StartTime = 0;
 void TimeManager::StartTime()
 {
 	s_StartTime = GetTickCount64();
+	s_PreTick = s_Now = s_DeltaTime = 0;
 }
 
 double TimeManager::GetDeltaTime()
