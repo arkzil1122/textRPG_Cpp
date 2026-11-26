@@ -4,7 +4,6 @@
 #include <string>
 #include "Utility.h"
 
-extern Utility utility;
 
 enum MonsterType {
 	MONSTER_NONE,

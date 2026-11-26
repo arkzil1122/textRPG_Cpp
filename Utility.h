@@ -8,8 +8,8 @@
 class Utility
 {
 public:
-	void InitRandom();
-	int ReadInt(int _min, int _max);
-	int RandomRange(int _min, int _max);
+	static void InitRandom();
+	static int ReadInt(int _min, int _max);
+	static int RandomRange(int _min, int _max);
 };
 

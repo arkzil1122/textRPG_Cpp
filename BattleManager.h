@@ -4,8 +4,6 @@
 #include "Player.h"
 #include "Utility.h"
 
-extern Utility utility;
-
 enum RESULT {
 	RESULT_NONE,
 	RESULT_WIN,
