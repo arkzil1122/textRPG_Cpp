@@ -18,6 +18,6 @@ private:
 
 
 public:
-	RESULT Battle(Player& _player, Monster& _monster);
+	static RESULT Battle(Player& _player, Monster& _monster);
 };
 

@@ -16,6 +16,5 @@ int main(void) {
 	monster.CreateMonster();
 	monster.Render();
 
-	BattleManager battleManager;
-	battleManager.Battle(player, monster);
+	BattleManager::Battle(player, monster);
 }
