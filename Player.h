@@ -33,6 +33,7 @@ private:
 	int MaxXP;
 	int XP;
 	int Gold;
+	double Speed;
 	bool isDead	;
 
 public:
@@ -45,6 +46,7 @@ public:
 	int GetXP();
 	int GetGold();
 	bool GetisDead();
+	double GetSpeed();
 
 	void GetDamage(int _damage);
 	

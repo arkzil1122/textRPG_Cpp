@@ -35,6 +35,7 @@ private:
 	int Gold;
 	int XP;
 	int Level;
+	double Speed;
 	bool isDead;
 
 	void SetMonster(MonsterType _type);
@@ -44,6 +45,7 @@ public:
 	int GetGold();
 	int GetXP();
 	bool GetisDead();
+	double GetSpeed();
 	std::string GetName();
 
 	void GetDamage(int _damage);

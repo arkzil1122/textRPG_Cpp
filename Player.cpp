@@ -10,16 +10,19 @@ void Player::SelectJob()
 		HP = MaxHP = 100;
 		Atk = 5;
 		JobName = JobNameAry[JOB_WARRIOR];
+		Speed = 1.0;
 		break;
 	case JOB_ARCHER:
 		HP = MaxHP = 70;
 		Atk = 7;
 		JobName = JobNameAry[JOB_ARCHER];
+		Speed = 1.2;
 		break;
 	case JOB_MAGE:
 		HP = MaxHP = 50;
 		Atk = 10;
 		JobName = JobNameAry[JOB_MAGE];
+		Speed = 0.8;
 		break;
 	}
 }
@@ -64,6 +67,11 @@ int Player::GetGold()
 bool Player::GetisDead()
 {
 	return isDead;
+}
+
+double Player::GetSpeed()
+{
+	return Speed;
 }
 
 void Player::GetDamage(int _damage)

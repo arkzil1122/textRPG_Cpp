@@ -25,6 +25,11 @@ bool Monster::GetisDead()
 	return isDead;
 }
 
+double Monster::GetSpeed()
+{
+	return Speed;
+}
+
 std::string Monster::GetName()
 {
 	return MonsterName;
