@@ -46,7 +46,7 @@ public:
 	bool GetisDead();
 	double GetSpeed();
 
-	void GetDamage(int _damage);
+	void TakeDamage(int _damage);
 	
 	void Render();
 };

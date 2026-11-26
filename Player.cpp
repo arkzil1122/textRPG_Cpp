@@ -77,7 +77,7 @@ double Player::GetSpeed()
 	return Speed;
 }
 
-void Player::GetDamage(int _damage)
+void Player::TakeDamage(int _damage)
 {
 	HP -= _damage;
 	if (HP <= 0) {

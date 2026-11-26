@@ -35,7 +35,7 @@ std::string Monster::GetName()
 	return MonsterName;
 }
 
-void Monster::GetDamage(int _damage)
+void Monster::TakeDamage(int _damage)
 {
 	HP -= _damage;
 	if (HP <= 0) {

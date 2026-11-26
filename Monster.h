@@ -47,7 +47,7 @@ public:
 	double GetSpeed();
 	std::string GetName();
 
-	void GetDamage(int _damage);
+	void TakeDamage(int _damage);
 
 	void InitMonster();
 	void CreateMonster();
