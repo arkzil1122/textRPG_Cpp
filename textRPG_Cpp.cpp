@@ -5,6 +5,8 @@
 #include "BattleManager.h"
 
 int main(void) {
+	
+	Utility::InitRandom();
 
 	Player player;
 	player.InitPlayer();
