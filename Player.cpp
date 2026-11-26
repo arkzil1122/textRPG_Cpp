@@ -7,18 +7,21 @@ void Player::SelectJob()
 
 	switch (userInput) {
 	case JOB_WARRIOR:
+		PlayerJob = JOB_WARRIOR;
 		HP = MaxHP = 100;
 		Atk = 5;
 		JobName = JobNameAry[JOB_WARRIOR];
 		Speed = 1.0;
 		break;
 	case JOB_ARCHER:
+		PlayerJob = JOB_ARCHER;
 		HP = MaxHP = 70;
 		Atk = 7;
 		JobName = JobNameAry[JOB_ARCHER];
 		Speed = 1.2;
 		break;
 	case JOB_MAGE:
+		PlayerJob = JOB_MAGE;
 		HP = MaxHP = 50;
 		Atk = 10;
 		JobName = JobNameAry[JOB_MAGE];
