@@ -4,8 +4,6 @@
 #include <string>
 #include "Utility.h"
 
-inline Utility utility;
-
 enum PlayerJob {
 	JOB_NONE,
 	JOB_WARRIOR,
