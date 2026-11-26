@@ -54,7 +54,8 @@ void Monster::InitMonster()
 void Monster::CreateMonster() {
 	int monsterNum = Utility::RandomRange(int(MONSTER_NONE + 1), int(MONSTER_COUNT - 1));
 	SetMonster(MonsterType(monsterNum));
-	std::cout << MonsterNameAry[monsterNum] << "이/가 나타났다!" << std::endl;
+	std::cout <<"야생의 " << MonsterNameAry[monsterNum] << "이/가 나타났다!" << std::endl;
+	system("pause");
 }
 
 void Monster::SetMonster(MonsterType _type) {

@@ -8,9 +8,13 @@ RESULT BattleScene::RunBattle()
 	while (_result == RESULT_NONE) {
 		_system.InitTurnInfo();
 		if (_system.NextActor() == ACTOR_PLAYER) {
+			DrawBattle();
+			SCENE_DEALY;
 			_system.PlayerAction(ReadBattleAction());
 		}
 		else {
+			DrawBattle();
+			SCENE_DEALY;
 			_system.MonsterAction();
 			SCENE_DEALY;
 		}
@@ -33,8 +37,11 @@ BattleScene::BattleScene(Player* _player, Monster* _monster)
 void BattleScene::DrawBattle()
 {
 	system("cls");
+	// 임시로 AP 띄우기 조치. TODO Action Bar 만들기.
 	_player->Render();
+	std::cout << "Player AP : " << _system.GetPlayerActionPoint() << std::endl;
 	_monster->Render();
+	std::cout << "Monster AP : " << _system.GetMonsterActionPoint() << std::endl;
 	std::cout << "\n무엇을 할까?" << std::endl;
 	std::cout << "1. 공격\t2.스킬\t3.방어\t4.도망" << std::endl;
 }
