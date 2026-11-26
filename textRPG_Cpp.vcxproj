@@ -139,7 +139,8 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="BattleManager.cpp" />
+    <ClCompile Include="BattleSystem.cpp" />
+    <ClCompile Include="BattleScene.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="textRPG_Cpp.cpp" />
@@ -147,7 +148,8 @@
     <ClCompile Include="Utility.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="BattleManager.h" />
+    <ClInclude Include="BattleSystem.h" />
+    <ClInclude Include="BattleScene.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="TimeManager.h" />

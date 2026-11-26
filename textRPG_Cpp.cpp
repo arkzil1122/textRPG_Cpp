@@ -3,6 +3,7 @@
 #include "Player.h"
 #include "Monster.h"
 #include "BattleSystem.h"
+#include "BattleScene.h"
 
 int main(void) {
 	
@@ -16,7 +17,9 @@ int main(void) {
 	Monster monster;
 	monster.InitMonster();
 	monster.CreateMonster();
-	monster.Render();
 
-	BattleSystem::BattleByTime(player, monster);
+	BattleScene battle = BattleScene(&player, &monster);
+	battle.RunBattle();
+
+	return 0;
 }
