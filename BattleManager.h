@@ -3,6 +3,9 @@
 #include "Monster.h"
 #include "Player.h"
 #include "Utility.h"
+#include "TimeManager.h"
+
+#define ACTION_TIME 1
 
 enum RESULT {
 	RESULT_NONE,
@@ -19,5 +22,6 @@ private:
 
 public:
 	static RESULT Battle(Player& _player, Monster& _monster);
+	static RESULT BattleByTime(Player& _player, Monster& _monster);
 };
 

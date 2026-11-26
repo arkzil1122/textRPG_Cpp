@@ -18,5 +18,5 @@ int main(void) {
 	monster.CreateMonster();
 	monster.Render();
 
-	BattleManager::Battle(player, monster);
+	BattleManager::BattleByTime(player, monster);
 }
