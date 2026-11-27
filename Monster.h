@@ -39,6 +39,8 @@ private:
 
 	void SetMonster(MonsterType _type);
 public:
+	Monster();
+
 	int GetHP();
 	int GetAtk();
 	int GetGold();
@@ -49,7 +51,6 @@ public:
 
 	void TakeDamage(int _damage);
 
-	void InitMonster();
 	void CreateMonster();
 	void Render();
 };

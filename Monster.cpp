@@ -44,12 +44,7 @@ void Monster::TakeDamage(int _damage)
 	}
 }
 
-void Monster::InitMonster()
-{
-	type = MONSTER_NONE;
-	isDead = false;
-	Level = 1;
-}
+
 
 void Monster::CreateMonster() {
 	int monsterNum = Utility::RandomRange(int(MONSTER_NONE + 1), int(MONSTER_COUNT - 1));
@@ -100,6 +95,13 @@ void Monster::SetMonster(MonsterType _type) {
 		Speed = 1.0;
 		break;
 	}
+}
+
+Monster::Monster()
+{
+	type = MONSTER_NONE;
+	isDead = false;
+	Level = 1;
 }
 
 
