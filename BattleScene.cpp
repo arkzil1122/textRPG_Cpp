@@ -42,12 +42,12 @@ void BattleScene::DrawBattle()
 	std::cout << "Player AP : " << _system.GetPlayerActionPoint() << std::endl;
 	_monster->Render();
 	std::cout << "Monster AP : " << _system.GetMonsterActionPoint() << std::endl;
-	std::cout << "\n무엇을 할까?" << std::endl;
-	std::cout << "1. 공격\t2.스킬\t3.방어\t4.도망" << std::endl;
 }
 
 BATTLE_ACTION BattleScene::ReadBattleAction()
 {
+	std::cout << "\n무엇을 할까?" << std::endl;
+	std::cout << "1. 공격\t2.스킬\t3.방어\t4.도망" << std::endl;
 	BATTLE_ACTION _action =
 		(BATTLE_ACTION) Utility::ReadInt(BATTLE_ACTION_NONE + 1, BATTLE_ACTION_COUNT - 1);
 	return _action;
