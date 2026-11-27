@@ -1,39 +1,18 @@
 ﻿#include "Monster.h"
 
-int Monster::GetHP()
-{
-	return HP;
-}
+int Monster::GetHP() { return HP; }
 
-int Monster::GetAtk()
-{
-	return Atk;
-}
+int Monster::GetAtk() { return Atk; }
 
-int Monster::GetGold()
-{
-	return Gold;
-}
+int Monster::GetGold() { return Gold; }
 
-int Monster::GetXP()
-{
-	return XP;
-}
+int Monster::GetXP() { return XP; }
 
-bool Monster::GetisDead()
-{
-	return isDead;
-}
+bool Monster::GetisDead() { return isDead; }
 
-double Monster::GetSpeed()
-{
-	return Speed;
-}
+double Monster::GetSpeed() { return Speed; }
 
-std::string Monster::GetName()
-{
-	return MonsterName;
-}
+std::string Monster::GetName() { return MonsterName; }
 
 void Monster::TakeDamage(int _damage)
 {
@@ -43,8 +22,6 @@ void Monster::TakeDamage(int _damage)
 		isDead = true;
 	}
 }
-
-
 
 void Monster::CreateMonster() {
 	int monsterNum = Utility::RandomRange(int(MONSTER_NONE + 1), int(MONSTER_COUNT - 1));
@@ -110,7 +87,6 @@ Monster::Monster()
 	Speed = 0;
 	isDead = false;
 }
-
 
 void Monster::Render() {
 	std::cout << "==========================" << std::endl;

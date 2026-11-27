@@ -81,7 +81,6 @@ void GameManager::RunGame() {
 	}
 }
 
-
 // 동적할당 정리
 GameManager::~GameManager()
 {

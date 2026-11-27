@@ -45,41 +45,19 @@ void Player::SelectJob()
 	}
 }
 
+int Player::GetHP() { return HP; }
 
-int Player::GetHP()
-{
-	return HP;
-}
+int Player::GetAtk() { return Atk; }
 
-int Player::GetAtk()
-{
-	return Atk;
-}
+int Player::GetLevel() { return Level; }
 
-int Player::GetLevel()
-{
-	return Level;
-}
+int Player::GetXP() { return XP; }
 
-int Player::GetXP()
-{
-	return XP;
-}
+int Player::GetGold() { return Gold; }
 
-int Player::GetGold()
-{
-	return Gold;
-}
+bool Player::GetisDead() { return isDead; }
 
-bool Player::GetisDead()
-{
-	return isDead;
-}
-
-double Player::GetSpeed()
-{
-	return Speed;
-}
+double Player::GetSpeed() { return Speed; }
 
 void Player::TakeDamage(int _damage)
 {

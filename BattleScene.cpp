@@ -33,7 +33,6 @@ BattleScene::BattleScene(Player* _player, Monster* _monster)
 	this->_monster = _monster;
 }
 
-
 void BattleScene::DrawBattle()
 {
 	system("cls");
