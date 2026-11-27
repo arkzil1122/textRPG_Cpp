@@ -28,11 +28,11 @@ ACTOR BattleSystem::NextActor()
 		_playerActionPoint += _player->GetSpeed();
 		_monsterActionPoint += _monster->GetSpeed();
 	}
-	if (_playerActionPoint >= 1 && _monsterActionPoint >= 1) {
+	if (_playerActionPoint >= ACTION_POINT_MAX && _monsterActionPoint >= ACTION_POINT_MAX) {
 		return _playerActionPoint >= _monsterActionPoint ? ACTOR_PLAYER : ACTOR_MONSTER;
 	}
 	else {
-		if (_playerActionPoint >= 1) {
+		if (_playerActionPoint >= ACTION_POINT_MAX) {
 			return ACTOR_PLAYER;
 		}
 		else {
