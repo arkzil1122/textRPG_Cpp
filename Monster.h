@@ -3,6 +3,7 @@
 #include <iostream>
 #include <string>
 #include "Utility.h"
+#include "Character.h"
 
 
 enum MonsterType {
@@ -14,44 +15,37 @@ enum MonsterType {
 	MONSTER_COUNT
 };
 
-inline std::string MonsterNameAry[MONSTER_COUNT] = {
-	"없음",
-	"슬라임",
-	"오크",
-	"토깽",
-	"용가리",
-};
-
-class Monster
-{
-private:
-	MonsterType type;
+struct MonsterData {
 	std::string MonsterName;
-
-	int HP;
-	int MaxHP;
-	int Atk;
-	int Gold;
-	int XP;
-	int Level;
-	double Speed;
-	bool isDead;
-
-	void SetMonster(MonsterType _type);
-public:
-	Monster();
-
-	int GetHP();
-	int GetAtk();
-	int GetGold();
-	int GetXP();
-	bool GetisDead();
-	double GetSpeed();
-	std::string GetName();
-
-	void TakeDamage(int _damage);
-
-	void CreateMonster();
-	void Render();
+	Status status;
+	int rewardXP;
+	int rewardGold;
 };
 
+inline MonsterData MonsterTable[MONSTER_COUNT] = {
+	{ "없음",{ 0, 0, 0, 0, 1 }, 0, 0 },
+	{ "슬라임",{ 0.5, 10, 10, 3, 1 }, 5, 5 },
+	{ "오크",{ 0.7, 15, 15, 5, 1 }, 8, 8 },
+	{ "토끼",{ 1.5, 20, 20, 7, 1 }, 10, 10 },
+	{ "드래곤",{ 1.0, 25, 25, 10, 1 }, 13, 13 }
+};
+
+class Monster : public Character {
+private:
+	int m_type;
+	int m_rewardXP;
+	int m_rewardGold;
+	
+
+public:
+	Monster(MonsterType _type);
+	
+	MonsterType GetType() const;
+	const int& GetRewardXP() const;
+	const int& GetRewardGold() const;
+	const std::string GetName() const;
+
+	void Render() const;
+
+	~Monster();
+};

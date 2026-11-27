@@ -1,4 +1,23 @@
 ﻿#include "GameManager.h"
+#include "Warrior.h"
+#include "Archer.h"
+#include "Mage.h"
+
+
+void GameManager::CreatePlayer(PlayerJob _job, std::string _name)
+{
+	switch (_job) {
+	case JOB_WARRIOR:
+		player = new Warrior(_name);
+		break;
+	case JOB_ARCHER:
+		player = new Archer(_name);
+		break;
+	case JOB_MAGE:
+		player = new Mage(_name);
+		break;
+	}
+}
 
 // 콘솔 창 크기 및 이런저런 환경설정 실행당 1회
 void GameManager::InitGame() {
@@ -10,7 +29,7 @@ void GameManager::NewGame() {
 	delete player;
 	delete monster;
 
-	player = new Player;
+	player = nullptr;
 	monster = nullptr;
 
 	nowScene = SCENE_JOB_SELECT;
@@ -22,16 +41,20 @@ void GameManager::RunGame() {
 	while (nowScene != SCENE_EXIT) {
 		switch (nowScene) {
 		case SCENE_JOB_SELECT:
-			player->SelectJob();
+		{
+			std::cout << "직업을 선택하세요. 1. 전사 2. 궁수 3. 법사" << std::endl;
+			int userInput = Utility::ReadInt(JOB_NONE + 1, JOB_COUNT - 1);
+			CreatePlayer((PlayerJob)userInput, DEFAULT_PLAYER_NAME);
 			nowScene = SCENE_ENCOUNTER;
+		}
 			break;
 
 		case SCENE_ENCOUNTER:
 			if (monster != nullptr) {
 				delete monster;
 			}
-			monster = new Monster;
-			monster->CreateMonster();
+			monster = new Monster((MonsterType)Utility::RandomRange(MONSTER_NONE + 1, MONSTER_COUNT - 1));
+			std::cout << monster->GetName() << "이/가 나타났다!" << std::endl;
 			nowScene = SCENE_BATTLE;
 			break;
 

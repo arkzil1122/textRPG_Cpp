@@ -21,12 +21,12 @@ void BattleSystem::InitTurnInfo()
 
 ACTOR BattleSystem::NextActor()
 {
-	if (_player->GetSpeed() <= 0 && _monster->GetSpeed() <= 0) {
+	if (_player->GetStatus().Speed <= 0 && _monster->GetStatus().Speed <= 0) {
 		return ACTOR_PLAYER;
 	}
 	while (_playerActionPoint < ACTION_POINT_MAX && _monsterActionPoint < ACTION_POINT_MAX) {
-		_playerActionPoint += _player->GetSpeed();
-		_monsterActionPoint += _monster->GetSpeed();
+		_playerActionPoint += _player->GetStatus().Speed;
+		_monsterActionPoint += _monster->GetStatus().Speed;
 	}
 	if (_playerActionPoint >= ACTION_POINT_MAX && _monsterActionPoint >= ACTION_POINT_MAX) {
 		return _playerActionPoint >= _monsterActionPoint ? ACTOR_PLAYER : ACTOR_MONSTER;
@@ -131,10 +131,10 @@ RESULT BattleSystem::CheckResult()
 	if (_result != RESULT_NONE) {
 		return _result;
 	}
-	if (_monster->GetisDead()) {
+	if (_monster->IsDead()) {
 		_result = RESULT_WIN;
 	}
-	else if (_player->GetisDead()) {
+	else if (_player->IsDead()) {
 		_result = RESULT_LOSE;
 	}
 	return _result;
@@ -146,31 +146,31 @@ RESULT BattleSystem::BattleByTime(Player& _player, Monster& _monster) {
 	double PlayerAction = 0;
 	double MonsterAction = 0;
 	int damage = 0;
-	while (!_player.GetisDead() && !_monster.GetisDead()) {
-		PlayerAction += TimeManager::GetDeltaTime() * _player.GetSpeed();
-		MonsterAction += TimeManager::GetDeltaTime() * _monster.GetSpeed();
+	while (!_player.IsDead() && !_monster.IsDead()) {
+		PlayerAction += TimeManager::GetDeltaTime() * _player.GetStatus().Speed;
+		MonsterAction += TimeManager::GetDeltaTime() * _monster.GetStatus().Speed;
 
 		if (PlayerAction >= ACTION_POINT_MAX) {
-			damage = _player.GetAtk() + Utility::RandomRange(-2, 2);
+			damage = _player.GetStatus().Atk + Utility::RandomRange(-2, 2);
 			
 			std::cout << "\n플레이어의 공격!" << std::endl;
 			_monster.TakeDamage(damage);
 			std::cout << damage << "의 데미지를 입혔다!" << std::endl;
 			PlayerAction -= ACTION_POINT_MAX;
 
-			if (_monster.GetisDead()) {
+			if (_monster.IsDead()) {
 				std::cout << _monster.GetName() << "이/가 쓰러졌다!" << std::endl;
 				result = RESULT_WIN;
 				break;
 			}
 		}
 		if (MonsterAction >= ACTION_POINT_MAX) {
-			damage = _monster.GetAtk() + Utility::RandomRange(-1, 1);
+			damage = _monster.GetStatus().Atk + Utility::RandomRange(-1, 1);
 			std::cout << '\n' << _monster.GetName() << "의 공격!" << std::endl;
 			_player.TakeDamage(damage);
 			std::cout << damage << "의 피해를 입었다!" << std::endl;
 			MonsterAction -= ACTION_POINT_MAX;
-			if (_player.GetisDead()) {
+			if (_player.IsDead()) {
 				std::cout << "You Died" << std::endl;
 				result = RESULT_LOSE;
 				break;
@@ -195,9 +195,9 @@ void BattleSystem::UseActionPoint(ACTOR _actor)
 int BattleSystem::SetDamage(ACTOR _actor)
 {
 	if (_actor == ACTOR_PLAYER) {
-		return _player->GetAtk() + Utility::RandomRange(-2, 2);
+		return _player->GetStatus().Atk + Utility::RandomRange(-2, 2);
 	}
 	else {
-		return _monster->GetAtk() + Utility::RandomRange(-1, 1);
+		return _monster->GetStatus().Atk + Utility::RandomRange(-1, 1);
 	}
 }

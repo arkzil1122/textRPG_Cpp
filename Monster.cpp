@@ -1,98 +1,30 @@
 ﻿#include "Monster.h"
 
-int Monster::GetHP() { return HP; }
-
-int Monster::GetAtk() { return Atk; }
-
-int Monster::GetGold() { return Gold; }
-
-int Monster::GetXP() { return XP; }
-
-bool Monster::GetisDead() { return isDead; }
-
-double Monster::GetSpeed() { return Speed; }
-
-std::string Monster::GetName() { return MonsterName; }
-
-void Monster::TakeDamage(int _damage)
+Monster::Monster(MonsterType _type) : Character(MonsterTable[_type].MonsterName, MonsterTable[_type].status)
 {
-	HP -= _damage;
-	if (HP <= 0) {
-		HP = 0;
-		isDead = true;
-	}
+	const MonsterData& data = MonsterTable[_type];
+
+	m_type = _type;
+	m_Name = data.MonsterName;
+	m_Status = data.status;
+	m_rewardXP = data.rewardXP;
+	m_rewardGold = data.rewardGold;
 }
 
-void Monster::CreateMonster() {
-	int monsterNum = Utility::RandomRange(int(MONSTER_NONE + 1), int(MONSTER_COUNT - 1));
-	SetMonster(MonsterType(monsterNum));
-	std::cout <<"야생의 " << MonsterNameAry[monsterNum] << "이/가 나타났다!" << std::endl;
-	system("pause");
-}
-
-void Monster::SetMonster(MonsterType _type) {
-	switch (_type) {
-	case MONSTER_SLIME:
-		type = MONSTER_SLIME;
-		MonsterName = MonsterNameAry[MONSTER_SLIME];
-		HP = MaxHP = 10;
-		Atk = 3;
-		Gold = 5;
-		XP = 5;
-		Speed = 0.5;
-		break;
-
-	case MONSTER_ORC:
-		type = MONSTER_ORC;
-		MonsterName = MonsterNameAry[MONSTER_ORC];
-		HP = MaxHP = 15;
-		Atk = 5;
-		Gold = 8;
-		XP = 8;
-		Speed = 0.7;
-		break;
-
-	case MONSTER_RABBIT:
-		type = MONSTER_RABBIT;
-		MonsterName = MonsterNameAry[MONSTER_RABBIT];
-		HP = MaxHP = 20;
-		Atk = 7;
-		Gold = 10;
-		XP = 10;
-		Speed = 1.5;
-		break;
-
-	case MONSTER_DRAGON:
-		type = MONSTER_DRAGON;
-		MonsterName = MonsterNameAry[MONSTER_DRAGON];
-		HP = MaxHP = 25;
-		Atk = 10;
-		Gold = 13;
-		XP = 13;
-		Speed = 1.0;
-		break;
-	}
-}
-
-Monster::Monster()
+const std::string Monster::GetName() const
 {
-	type = MONSTER_NONE;
-	MonsterName = MonsterNameAry[type];
-	Level = 1;
-	HP = 0;
-	MaxHP = 0;
-	Atk = 0;
-	Gold = 0;
-	XP = 0;
-	Speed = 0;
-	isDead = false;
+	return MonsterTable[m_type].MonsterName;
 }
 
-void Monster::Render() {
+void Monster::Render() const {
 	std::cout << "==========================" << std::endl;
-	std::cout << "종류 : " << MonsterName << std::endl;
-	std::cout << "HP : " << HP << " / " << MaxHP;
-	std::cout << "\tAtk : " << Atk << std::endl;
-	std::cout << "레벨 : " << Level << std::endl;
+	std::cout << "종류 : " <<  m_Name << std::endl;
+	std::cout << "HP : " << m_Status.HP << " / " << m_Status.maxHP;
+	std::cout << "\tAtk : " << m_Status.Atk << std::endl;
+	std::cout << "레벨 : " << m_Status.Level << std::endl;
 	std::cout << "==========================" << std::endl;
+}
+
+Monster::~Monster()
+{
 }

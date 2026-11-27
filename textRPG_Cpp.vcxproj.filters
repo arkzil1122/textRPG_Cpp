@@ -13,54 +13,108 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="소스 파일\Player">
+      <UniqueIdentifier>{23e82b73-3d6a-4215-9c96-1890ab87e20b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Manager">
+      <UniqueIdentifier>{46b8df03-9d5a-4805-93f4-8a9524f1d547}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Utility">
+      <UniqueIdentifier>{504cd33d-fdef-44be-a4fc-df46e8fc35e4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Battle">
+      <UniqueIdentifier>{22e64e63-6cbd-490f-a646-edf96aede5c5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Monster">
+      <UniqueIdentifier>{46e32b33-b72e-4454-98ef-82d07d224093}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Character">
+      <UniqueIdentifier>{3b6cec54-23ae-46ec-a34e-69784ba0973d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Player\Job">
+      <UniqueIdentifier>{bd676e5a-9cca-4858-a9f1-025c748bf77d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Player\Job\01_Warrior">
+      <UniqueIdentifier>{3de71aac-5d19-43d0-ba3b-0e9a67ccfbfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Player\Job\03_Mage">
+      <UniqueIdentifier>{b68c738f-1832-4451-8eed-54d06fb57284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="소스 파일\Player\Job\02_Archer">
+      <UniqueIdentifier>{d776d8a4-b3a1-4618-b58e-550da9804ecd}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="textRPG_Cpp.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="Utility.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="Player.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="Monster.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="BattleSystem.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
-    <ClCompile Include="BattleScene.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Player</Filter>
     </ClCompile>
     <ClCompile Include="TimeManager.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Manager</Filter>
     </ClCompile>
     <ClCompile Include="GameManager.cpp">
-      <Filter>소스 파일</Filter>
+      <Filter>소스 파일\Manager</Filter>
+    </ClCompile>
+    <ClCompile Include="Utility.cpp">
+      <Filter>소스 파일\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleScene.cpp">
+      <Filter>소스 파일\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="BattleSystem.cpp">
+      <Filter>소스 파일\Battle</Filter>
+    </ClCompile>
+    <ClCompile Include="Character.cpp">
+      <Filter>소스 파일\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Monster.cpp">
+      <Filter>소스 파일\Monster</Filter>
+    </ClCompile>
+    <ClCompile Include="Warrior.cpp">
+      <Filter>소스 파일\Player\Job\01_Warrior</Filter>
+    </ClCompile>
+    <ClCompile Include="Archer.cpp">
+      <Filter>소스 파일\Player\Job\02_Archer</Filter>
+    </ClCompile>
+    <ClCompile Include="Mage.cpp">
+      <Filter>소스 파일\Player\Job\03_Mage</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Utility.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
     <ClInclude Include="Player.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="Monster.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="BattleSystem.h">
-      <Filter>헤더 파일</Filter>
-    </ClInclude>
-    <ClInclude Include="BattleScene.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\Player</Filter>
     </ClInclude>
     <ClInclude Include="TimeManager.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\Manager</Filter>
     </ClInclude>
     <ClInclude Include="GameManager.h">
-      <Filter>헤더 파일</Filter>
+      <Filter>소스 파일\Manager</Filter>
+    </ClInclude>
+    <ClInclude Include="Utility.h">
+      <Filter>소스 파일\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleScene.h">
+      <Filter>소스 파일\Battle</Filter>
+    </ClInclude>
+    <ClInclude Include="Character.h">
+      <Filter>소스 파일\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Monster.h">
+      <Filter>소스 파일\Monster</Filter>
+    </ClInclude>
+    <ClInclude Include="Warrior.h">
+      <Filter>소스 파일\Player\Job\01_Warrior</Filter>
+    </ClInclude>
+    <ClInclude Include="Archer.h">
+      <Filter>소스 파일\Player\Job\02_Archer</Filter>
+    </ClInclude>
+    <ClInclude Include="Mage.h">
+      <Filter>소스 파일\Player\Job\03_Mage</Filter>
+    </ClInclude>
+    <ClInclude Include="BattleSystem.h">
+      <Filter>소스 파일\Battle</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

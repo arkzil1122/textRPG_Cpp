@@ -28,6 +28,8 @@ private:
 	RESULT result;
 	SCENE nowScene;
 
+	void CreatePlayer(PlayerJob _job, std::string _name);
+
 public:
 	void InitGame();
 	void NewGame();

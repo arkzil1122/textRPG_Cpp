@@ -94,7 +94,7 @@ void BattleScene::ShowResult(RESULT _result)
 	case RESULT_LOSE:
 		std::cout << "You Died." << std::endl;
 		std::cout << "당신은 " << _monster->GetName() << "에게 패배했다.";
-		std::cout << "(남은 체력 : " << _monster->GetHP() << ")" << std::endl;
+		std::cout << "(남은 체력 : " << _monster->GetStatus().HP << ")" << std::endl;
 		SCENE_DEALY;
 		// 재도전?
 		break;
