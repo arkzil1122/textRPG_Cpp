@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="BattleSystem.cpp" />
     <ClCompile Include="BattleScene.cpp" />
+    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="Monster.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="textRPG_Cpp.cpp" />
@@ -150,6 +151,7 @@
   <ItemGroup>
     <ClInclude Include="BattleSystem.h" />
     <ClInclude Include="BattleScene.h" />
+    <ClInclude Include="GameManager.h" />
     <ClInclude Include="Monster.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="TimeManager.h" />

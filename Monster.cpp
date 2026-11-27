@@ -100,8 +100,15 @@ void Monster::SetMonster(MonsterType _type) {
 Monster::Monster()
 {
 	type = MONSTER_NONE;
-	isDead = false;
+	MonsterName = MonsterNameAry[type];
 	Level = 1;
+	HP = 0;
+	MaxHP = 0;
+	Atk = 0;
+	Gold = 0;
+	XP = 0;
+	Speed = 0;
+	isDead = false;
 }
 
 
