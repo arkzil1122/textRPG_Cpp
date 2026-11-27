@@ -35,8 +35,10 @@ private:
 	bool isDead	;
 
 public:
+
+	Player();
+
 	void SelectJob();
-	void InitPlayer();
 
 	int GetHP();
 	int GetAtk();

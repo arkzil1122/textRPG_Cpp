@@ -1,5 +1,20 @@
 ﻿#include "Player.h"
 
+Player::Player()
+{
+	PlayerJob = JOB_NONE;
+	JobName = JobNameAry[JOB_NONE];
+	MaxHP = 0;
+	HP = 0;
+	Atk = 0;
+	Level = 1;
+	MaxXP = 0;
+	XP = 0;
+	Gold = 0;
+	Speed = 0;
+	isDead = false;
+}
+
 void Player::SelectJob()
 {
 	std::cout << "직업을 선택하세요. (1. 전사\t2. 궁수 \t3. 법사)" << std::endl;
@@ -30,17 +45,6 @@ void Player::SelectJob()
 	}
 }
 
-void Player::InitPlayer()
-{
-	HP = 0;
-	MaxHP = 0;
-	Atk = 0;
-	Level = 1;
-	MaxXP = 0;
-	XP = 0;
-	Gold = 0;
-	isDead = false;
-}
 
 int Player::GetHP()
 {
